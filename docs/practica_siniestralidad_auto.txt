@@ -30,4 +30,3 @@ Modelo LightGBM
 Optimización de hiperparámetros para el mejor modelo y contrucción de pipeline
 Interpretabilidad
 Conclusiones finales
-Adicionalmente, debemos hacer otra práctica, más pequeña, para un caso de multiclasificación, lo haremos con esto: https://www.kaggle.com/vikaspericherla/automobile-customer-multiclassification, hay que predecir la oferta más adecuada (última columna)
