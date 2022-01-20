@@ -14,7 +14,7 @@ A primera vista, me interesa saber varias cosas:
 
 Libertad para generar análisis de valor y nuevas ideas. 
 
-Pasos:
+Pasos: 
 
 EDA.
 Establecer objetivos a modelar.
