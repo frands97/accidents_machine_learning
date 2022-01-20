@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    form {
+      margin: auto;
+      width: 35%;
+    }
+
+    .result {
+      margin: auto;
+      width: 35%;
+      border: 1px solid #ccc;
+    }
+  </style>
+
+  <head>
+    <title>Canada Accidents</title>
+  </head>
+  <form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+      <legend>Input values:</legend>
+      {% for columna in lis_num %} {{columna}}
+      <input name="{{ columna }}" type="number" required />
+      <br />
+      <br />
+      {% endfor %} {% for columna, valores in dic_cat.items() %} {{ columna }}
+      <select id="{{ columna }}" name="{{ columna }}">
+        {% for val in valores %}
+        <option value="{{ val }}">{{ val }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <br />
+      {% endfor %}
+      <input type="submit" />
+    </fieldset>
+  </form>
+  <br />
+  <div class="result" align="center">
+    {% if prediction%}
+    {% if prediction >= 50 %}
+    <br />
+    <br />
+    <p>La probabilidad de que esta persona fallezca es de</p>
+    <span style="font-size: 50px; color: red">{{ prediction }}.</span>
+    {% else %}
+    <p>La probabilidad de que esta persona fallezca es de</p>
+    <span style="font-size: 50px; color: blue">{{ prediction }}.</span>
+    {% endif %}
+    {% endif %}
+  </div>
+</html>
